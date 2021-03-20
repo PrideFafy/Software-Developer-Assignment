@@ -178,7 +178,13 @@
                 <artifactId>hsqldb</artifactId>
                 <version>${hsqldb.version}</version>
             </dependency>
-
+			<!-- FIX for JDK>8 javax is no longer part of standard Java from 11+ so you have to manually add the dependencies -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+				<scope>provided</scope>
+			</dependency>
 
         </dependencies>
     </dependencyManagement>
